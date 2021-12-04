@@ -4,11 +4,11 @@ import Foundation
 public struct Dog: Decodable, Equatable {
     
     let name: String
-    let bredFor: String
+    let bredFor: String?
     let breedGroup: String?
-    let lifeSpan: String
-    let temperament: String
-    let origin: String
+    let lifeSpan: String?
+    let temperament: String?
+    let origin: String?
     let image: Image
     let weight: Weight
     let height: Height

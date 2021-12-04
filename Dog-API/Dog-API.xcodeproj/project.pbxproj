@@ -35,6 +35,8 @@
 		0B45A2F5275BEC3B002791FA /* AllDogsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B45A2F4275BEC3B002791FA /* AllDogsManager.swift */; };
 		0B45A2F7275BEC4D002791FA /* AllDogsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B45A2F6275BEC4D002791FA /* AllDogsCollectionViewController.swift */; };
 		0B45A2F9275BEC5A002791FA /* AllDogsCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B45A2F8275BEC5A002791FA /* AllDogsCollectionCell.swift */; };
+		0B45A2FB275BF929002791FA /* AllDogsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B45A2FA275BF929002791FA /* AllDogsPresenter.swift */; };
+		0B45A2FD275C005E002791FA /* DogCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B45A2FC275C005E002791FA /* DogCellView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +81,8 @@
 		0B45A2F4275BEC3B002791FA /* AllDogsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllDogsManager.swift; sourceTree = "<group>"; };
 		0B45A2F6275BEC4D002791FA /* AllDogsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllDogsCollectionViewController.swift; sourceTree = "<group>"; };
 		0B45A2F8275BEC5A002791FA /* AllDogsCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllDogsCollectionCell.swift; sourceTree = "<group>"; };
+		0B45A2FA275BF929002791FA /* AllDogsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllDogsPresenter.swift; sourceTree = "<group>"; };
+		0B45A2FC275C005E002791FA /* DogCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogCellView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -244,6 +248,8 @@
 			children = (
 				0B45A2F6275BEC4D002791FA /* AllDogsCollectionViewController.swift */,
 				0B45A2F8275BEC5A002791FA /* AllDogsCollectionCell.swift */,
+				0B45A2FA275BF929002791FA /* AllDogsPresenter.swift */,
+				0B45A2FC275C005E002791FA /* DogCellView.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -380,7 +386,9 @@
 			files = (
 				0B45A29A275A79D4002791FA /* AppDelegate.swift in Sources */,
 				0B45A2D8275A7F9B002791FA /* GetAllDogsRequest.swift in Sources */,
+				0B45A2FD275C005E002791FA /* DogCellView.swift in Sources */,
 				0B45A2D4275A7F6B002791FA /* NetworkSession.swift in Sources */,
+				0B45A2FB275BF929002791FA /* AllDogsPresenter.swift in Sources */,
 				0B45A2E1275A8A9F002791FA /* AllDogsGateway.swift in Sources */,
 				0B45A29C275A79D4002791FA /* SceneDelegate.swift in Sources */,
 				0B45A2A4275A79D4002791FA /* Dog_API.xcdatamodeld in Sources */,
