@@ -38,13 +38,9 @@ final class AllDogsGatewayTests: XCTestCase {
         XCTAssertNil(error)
         XCTAssertEqual(allDogs?.count, 3)
         XCTAssertEqual(allDogs?[0].name, "Affenpinscher")
-        XCTAssertEqual(allDogs?[0].bredFor, "Small rodent hunting, lapdog")
         XCTAssertEqual(allDogs?[0].breedGroup, "Toy")
-        XCTAssertEqual(allDogs?[0].height.metric, "23 - 29")
-        XCTAssertEqual(allDogs?[0].weight.metric, "3 - 6")
-        XCTAssertEqual(allDogs?[0].lifeSpan, "10 - 12 years")
         XCTAssertEqual(allDogs?[0].temperament, "Stubborn, Curious, Playful, Adventurous, Active, Fun-loving")
         XCTAssertEqual(allDogs?[0].origin, "Germany, France")
-        XCTAssertEqual(allDogs?[0].image.url, "https://cdn2.thedogapi.com/images/BJa4kxc4X.jpg")
+        XCTAssertEqual(allDogs?[0].image!.url, "https://cdn2.thedogapi.com/images/BJa4kxc4X.jpg")
     }
 }

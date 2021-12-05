@@ -25,26 +25,4 @@ public class AllDogsManager: AllDogsManagerProtocol {
             }
         }
     }
-    
-    // TODO: Add tests for this function
-    func buildDogInfo(with dog: Dog) -> Dog{
-        
-        return Dog(name: dog.name,
-                   breedGroup: buildField(with: dog.breedGroup),
-                   temperament: buildField(with: dog.temperament),
-                   origin: buildField(with: dog.origin),
-                   image: dog.image)
-        
-    }
-    
-    func buildField(with field: String?) -> String{
-        var returnedField: String
-        if (field == nil || field == ""){
-            returnedField = InformationConstant.noInformation.rawValue
-        }else {
-            returnedField = field!
-        }
-        
-        return returnedField
-    }
 }

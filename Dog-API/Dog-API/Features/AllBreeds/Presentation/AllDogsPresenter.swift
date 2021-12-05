@@ -44,7 +44,11 @@ public class AllDogsPresenter {
     
     func configureDogCellView(_ view: DogCellView, forIndex index: Int) {
         let dog = allDogs[index]
-        view.displayImage(with: dog.image.url)
+        
+        guard let image = dog.image else {
+            return
+        }
+        view.displayImage(with: image.url)
         view.displayDogName(with: dog.name)
     }
     
@@ -54,7 +58,7 @@ public class AllDogsPresenter {
         //In this case, there are many fields that can be empty in this case they will return a nil
         // object. To show all the information for every dog I'm going to use the manager to return
         // a object with all of the information.
-        let dogWithCompleteInfo = allDogsManager.buildDogInfo(with: selectedDog)
+        let dogWithCompleteInfo = Utils.buildDogInfo(with: selectedDog)
         view?.navigateToDogInformationScreen(with: dogWithCompleteInfo)
     }
 }

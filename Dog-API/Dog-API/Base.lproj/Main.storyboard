@@ -34,6 +34,9 @@
                                         <buttonConfiguration key="configuration" style="filled" image="magnifyingglass" catalog="system">
                                             <color key="baseBackgroundColor" systemColor="systemPinkColor"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="searchButtonPressed:" destination="T59-pA-aSS" eventType="touchUpInside" id="au1-oC-QmP"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -70,20 +73,47 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="t0j-b5-dFh">
                                 <rect key="frame" x="0.0" y="84" width="414" height="729"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="pkq-bk-frq">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="pkq-bk-frq">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="3Ie-hx-56j" customClass="DogViewCell">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DogSearchCell" id="3Ie-hx-56j" customClass="SearchCollectionCell" customModule="Dog_API" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ld8-or-Inu">
                                             <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rFN-zv-m08">
+                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="foX-BJ-Om7">
+                                                    <rect key="frame" x="0.0" y="89" width="128" height="31"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="31" id="7qc-Q1-vI2"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="rFN-zv-m08" firstAttribute="top" secondItem="ld8-or-Inu" secondAttribute="top" id="5pv-Jg-iPF"/>
+                                                <constraint firstItem="foX-BJ-Om7" firstAttribute="leading" secondItem="ld8-or-Inu" secondAttribute="leading" id="6GH-lK-MjT"/>
+                                                <constraint firstAttribute="bottom" secondItem="rFN-zv-m08" secondAttribute="bottom" id="KZw-Ni-4Rg"/>
+                                                <constraint firstAttribute="trailing" secondItem="rFN-zv-m08" secondAttribute="trailing" id="VYW-K4-n49"/>
+                                                <constraint firstItem="foX-BJ-Om7" firstAttribute="bottom" secondItem="ld8-or-Inu" secondAttribute="bottomMargin" id="Z1Z-SS-Z17"/>
+                                                <constraint firstAttribute="trailing" secondItem="foX-BJ-Om7" secondAttribute="trailing" id="qEu-oE-aei"/>
+                                                <constraint firstItem="rFN-zv-m08" firstAttribute="leading" secondItem="ld8-or-Inu" secondAttribute="leading" id="zDD-lU-anx"/>
+                                            </constraints>
                                         </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="dogName" destination="foX-BJ-Om7" id="IkD-yv-7PL"/>
+                                            <outlet property="image" destination="rFN-zv-m08" id="20j-Mb-ief"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -105,8 +135,10 @@
                     </view>
                     <tabBarItem key="tabBarItem" selectedImage="square.and.arrow.up" catalog="system" systemItem="search" id="6Fs-7M-NRp"/>
                     <connections>
-                        <outlet property="collection" destination="t0j-b5-dFh" id="LxT-7b-fWS"/>
-                        <outlet property="emptyView" destination="4EP-YN-342" id="LOh-Q3-Nkp"/>
+                        <outlet property="collectionView" destination="t0j-b5-dFh" id="2dL-96-60m"/>
+                        <outlet property="placeholderView" destination="4EP-YN-342" id="LOh-Q3-Nkp"/>
+                        <outlet property="searchTextField" destination="qkZ-KE-Ynr" id="cur-pb-Ydw"/>
+                        <segue destination="51I-CK-ZAN" kind="presentation" identifier="searchScreenToDogInformationScreen" id="uNl-yG-QvO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aUO-fa-aJL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -298,6 +330,9 @@
             <point key="canvasLocation" x="-935" y="49"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="uNl-yG-QvO"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="chevron.backward" catalog="system" width="96" height="128"/>
         <image name="dog" width="266.5" height="150"/>
