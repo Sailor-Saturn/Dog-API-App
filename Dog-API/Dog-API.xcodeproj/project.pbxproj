@@ -37,6 +37,9 @@
 		0B45A2F9275BEC5A002791FA /* AllDogsCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B45A2F8275BEC5A002791FA /* AllDogsCollectionCell.swift */; };
 		0B45A2FB275BF929002791FA /* AllDogsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B45A2FA275BF929002791FA /* AllDogsPresenter.swift */; };
 		0B45A2FD275C005E002791FA /* DogCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B45A2FC275C005E002791FA /* DogCellView.swift */; };
+		0B45A302275C2DBD002791FA /* DogInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B45A301275C2DBD002791FA /* DogInformationViewController.swift */; };
+		0B45A304275C2E6E002791FA /* DogInformationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B45A303275C2E6E002791FA /* DogInformationPresenter.swift */; };
+		0B45A306275C3856002791FA /* Segues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B45A305275C3856002791FA /* Segues.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +86,9 @@
 		0B45A2F8275BEC5A002791FA /* AllDogsCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllDogsCollectionCell.swift; sourceTree = "<group>"; };
 		0B45A2FA275BF929002791FA /* AllDogsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllDogsPresenter.swift; sourceTree = "<group>"; };
 		0B45A2FC275C005E002791FA /* DogCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogCellView.swift; sourceTree = "<group>"; };
+		0B45A301275C2DBD002791FA /* DogInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogInformationViewController.swift; sourceTree = "<group>"; };
+		0B45A303275C2E6E002791FA /* DogInformationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogInformationPresenter.swift; sourceTree = "<group>"; };
+		0B45A305275C3856002791FA /* Segues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Segues.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,7 +182,9 @@
 		0B45A2CD275A7E8A002791FA /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				0B45A2FE275C2D9A002791FA /* DogInformation */,
 				0B45A2F1275BDE94002791FA /* AllBreeds */,
+				0B45A305275C3856002791FA /* Segues.swift */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -252,6 +260,31 @@
 				0B45A2FC275C005E002791FA /* DogCellView.swift */,
 			);
 			path = Presentation;
+			sourceTree = "<group>";
+		};
+		0B45A2FE275C2D9A002791FA /* DogInformation */ = {
+			isa = PBXGroup;
+			children = (
+				0B45A300275C2DAB002791FA /* Data */,
+				0B45A2FF275C2DA5002791FA /* Presentation */,
+			);
+			path = DogInformation;
+			sourceTree = "<group>";
+		};
+		0B45A2FF275C2DA5002791FA /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				0B45A301275C2DBD002791FA /* DogInformationViewController.swift */,
+				0B45A303275C2E6E002791FA /* DogInformationPresenter.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		0B45A300275C2DAB002791FA /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -387,6 +420,7 @@
 				0B45A29A275A79D4002791FA /* AppDelegate.swift in Sources */,
 				0B45A2D8275A7F9B002791FA /* GetAllDogsRequest.swift in Sources */,
 				0B45A2FD275C005E002791FA /* DogCellView.swift in Sources */,
+				0B45A306275C3856002791FA /* Segues.swift in Sources */,
 				0B45A2D4275A7F6B002791FA /* NetworkSession.swift in Sources */,
 				0B45A2FB275BF929002791FA /* AllDogsPresenter.swift in Sources */,
 				0B45A2E1275A8A9F002791FA /* AllDogsGateway.swift in Sources */,
@@ -394,9 +428,11 @@
 				0B45A2A4275A79D4002791FA /* Dog_API.xcdatamodeld in Sources */,
 				0B45A2F5275BEC3B002791FA /* AllDogsManager.swift in Sources */,
 				0B45A2F9275BEC5A002791FA /* AllDogsCollectionCell.swift in Sources */,
+				0B45A302275C2DBD002791FA /* DogInformationViewController.swift in Sources */,
 				0B45A2E5275A8CE8002791FA /* Dog.swift in Sources */,
 				0B45A2D0275A7F0B002791FA /* URLRequestable.swift in Sources */,
 				0B45A2F7275BEC4D002791FA /* AllDogsCollectionViewController.swift in Sources */,
+				0B45A304275C2E6E002791FA /* DogInformationPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

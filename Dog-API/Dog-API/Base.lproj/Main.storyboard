@@ -17,14 +17,73 @@
                     <view key="view" contentMode="scaleToFill" id="fJg-Sb-EwC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pX1-xu-YAl">
+                                <rect key="frame" x="0.0" y="44" width="414" height="40"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search a breed in this field" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qkZ-KE-Ynr">
+                                        <rect key="frame" x="0.0" y="0.0" width="369.5" height="40"/>
+                                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="leC-i8-flG">
+                                        <rect key="frame" x="369.5" y="0.0" width="44.5" height="40"/>
+                                        <color key="tintColor" systemColor="systemPinkColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" image="magnifyingglass" catalog="system">
+                                            <color key="baseBackgroundColor" systemColor="systemPinkColor"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="zYs-Bn-hpE"/>
+                                </constraints>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4EP-YN-342">
+                                <rect key="frame" x="0.0" y="226" width="414" height="421"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dog" translatesAutoresizingMaskIntoConstraints="NO" id="knX-BL-naC">
+                                        <rect key="frame" x="87" y="50" width="240" height="140"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="140" id="2Id-6H-3yF"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search for a dog name on the search bar above ☺️" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zs3-Np-zdM">
+                                        <rect key="frame" x="0.0" y="260" width="414" height="48"/>
+                                        <fontDescription key="fontDescription" type="italicSystem" pointSize="20"/>
+                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="421" id="GGc-3i-I36"/>
+                                    <constraint firstItem="knX-BL-naC" firstAttribute="leading" secondItem="4EP-YN-342" secondAttribute="leading" constant="87" id="Gey-hI-kNx"/>
+                                    <constraint firstItem="knX-BL-naC" firstAttribute="top" secondItem="4EP-YN-342" secondAttribute="top" constant="50" id="PZD-xJ-9AP"/>
+                                    <constraint firstItem="Zs3-Np-zdM" firstAttribute="leading" secondItem="4EP-YN-342" secondAttribute="leading" id="aOG-dc-CNE"/>
+                                    <constraint firstAttribute="trailing" secondItem="Zs3-Np-zdM" secondAttribute="trailing" id="fb3-ej-nVg"/>
+                                    <constraint firstItem="Zs3-Np-zdM" firstAttribute="top" secondItem="knX-BL-naC" secondAttribute="bottom" constant="70" id="nxB-EK-e5U"/>
+                                    <constraint firstAttribute="trailing" secondItem="knX-BL-naC" secondAttribute="trailing" constant="87" id="tlP-Y0-g2K"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="X1W-vx-gCN"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="4EP-YN-342" firstAttribute="leading" secondItem="X1W-vx-gCN" secondAttribute="leading" id="5af-wm-V9n"/>
+                            <constraint firstItem="pX1-xu-YAl" firstAttribute="leading" secondItem="fJg-Sb-EwC" secondAttribute="leading" id="YAi-4X-dtU"/>
+                            <constraint firstItem="pX1-xu-YAl" firstAttribute="top" secondItem="X1W-vx-gCN" secondAttribute="top" id="b4X-1F-iYN"/>
+                            <constraint firstItem="X1W-vx-gCN" firstAttribute="trailing" secondItem="4EP-YN-342" secondAttribute="trailing" id="g7K-zZ-W42"/>
+                            <constraint firstItem="X1W-vx-gCN" firstAttribute="trailing" secondItem="pX1-xu-YAl" secondAttribute="trailing" id="geX-3a-V5q"/>
+                            <constraint firstItem="4EP-YN-342" firstAttribute="top" secondItem="pX1-xu-YAl" secondAttribute="bottom" constant="142" id="srq-hv-MbY"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" selectedImage="square.and.arrow.up" catalog="system" systemItem="search" id="6Fs-7M-NRp"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aUO-fa-aJL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-46" y="352"/>
+            <point key="canvasLocation" x="-46.376811594202906" y="351.5625"/>
         </scene>
         <!--Breeds-->
         <scene sceneID="B1T-cZ-bw9">
@@ -72,10 +131,111 @@
                     <tabBarItem key="tabBarItem" title="Breeds" image="heart.fill" catalog="system" id="Ywv-Xa-TLj">
                         <imageReference key="selectedImage" image="heart" catalog="system" symbolScale="large"/>
                     </tabBarItem>
+                    <connections>
+                        <segue destination="51I-CK-ZAN" kind="presentation" identifier="allDogsScreenToDogInformationScreen" id="a2f-DJ-o9r"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1cJ-Pn-d4r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-46.376811594202906" y="-288.61607142857139"/>
+        </scene>
+        <!--Dog Information View Controller-->
+        <scene sceneID="4i4-Cu-bC1">
+            <objects>
+                <viewController id="51I-CK-ZAN" customClass="DogInformationViewController" customModule="Dog_API" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oP1-vZ-UBt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="r5E-9Y-Dug">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                <subviews>
+                                    <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LQW-lf-OQk">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="153"/>
+                                        <color key="barTintColor" systemColor="systemPinkColor"/>
+                                        <textAttributes key="titleTextAttributes">
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </textAttributes>
+                                        <items>
+                                            <navigationItem title="Information" id="ecN-MG-0tO">
+                                                <barButtonItem key="leftBarButtonItem" title="Back" id="iRZ-tn-Pk5">
+                                                    <imageReference key="image" image="chevron.backward" catalog="system" symbolScale="large"/>
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <connections>
+                                                        <action selector="backButtonTapped:" destination="51I-CK-ZAN" id="BzM-DM-uQa"/>
+                                                    </connections>
+                                                </barButtonItem>
+                                            </navigationItem>
+                                        </items>
+                                    </navigationBar>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rs1-bg-a0c">
+                                        <rect key="frame" x="0.0" y="153" width="414" height="529"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1gU-SV-qVi">
+                                        <rect key="frame" x="0.0" y="682" width="414" height="31.5"/>
+                                        <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                        <fontDescription key="fontDescription" type="italicSystem" pointSize="26"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="highlightedColor" systemColor="labelColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ye6-kA-cwk">
+                                        <rect key="frame" x="0.0" y="713.5" width="414" height="31.5"/>
+                                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EZ4-3g-Ysd">
+                                        <rect key="frame" x="0.0" y="745" width="414" height="31.5"/>
+                                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jPb-NK-FQ0">
+                                        <rect key="frame" x="0.0" y="776.5" width="414" height="31.5"/>
+                                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="rs1-bg-a0c" firstAttribute="leading" secondItem="r5E-9Y-Dug" secondAttribute="leading" id="3CZ-8t-t1O"/>
+                                    <constraint firstItem="Ye6-kA-cwk" firstAttribute="leading" secondItem="r5E-9Y-Dug" secondAttribute="leading" id="3Zm-cG-lXZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="rs1-bg-a0c" secondAttribute="trailing" id="3dv-L8-V03"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ye6-kA-cwk" secondAttribute="trailing" id="EMV-fh-TTB"/>
+                                    <constraint firstItem="rs1-bg-a0c" firstAttribute="top" secondItem="LQW-lf-OQk" secondAttribute="bottom" id="MAC-DT-9Cz"/>
+                                    <constraint firstItem="EZ4-3g-Ysd" firstAttribute="top" secondItem="Ye6-kA-cwk" secondAttribute="bottom" id="OTj-XP-2g0"/>
+                                    <constraint firstItem="1gU-SV-qVi" firstAttribute="leading" secondItem="r5E-9Y-Dug" secondAttribute="leading" id="fDP-Mj-Tpf"/>
+                                    <constraint firstItem="1gU-SV-qVi" firstAttribute="top" secondItem="rs1-bg-a0c" secondAttribute="bottom" id="igL-UZ-SSN"/>
+                                    <constraint firstAttribute="trailing" secondItem="1gU-SV-qVi" secondAttribute="trailing" id="l3w-qX-HaW"/>
+                                    <constraint firstItem="EZ4-3g-Ysd" firstAttribute="leading" secondItem="r5E-9Y-Dug" secondAttribute="leading" id="ouT-3z-tqe"/>
+                                    <constraint firstItem="rs1-bg-a0c" firstAttribute="top" secondItem="LQW-lf-OQk" secondAttribute="bottom" id="plC-rx-PeT"/>
+                                    <constraint firstAttribute="trailing" secondItem="EZ4-3g-Ysd" secondAttribute="trailing" id="sr3-5Q-Ezj"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="B2E-sx-rYE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="B2E-sx-rYE" firstAttribute="trailing" secondItem="r5E-9Y-Dug" secondAttribute="trailing" id="GY8-jO-Ktx"/>
+                            <constraint firstItem="r5E-9Y-Dug" firstAttribute="top" secondItem="B2E-sx-rYE" secondAttribute="top" id="IKb-yy-kCK"/>
+                            <constraint firstItem="B2E-sx-rYE" firstAttribute="bottom" secondItem="r5E-9Y-Dug" secondAttribute="bottom" id="las-bg-eo8"/>
+                            <constraint firstItem="r5E-9Y-Dug" firstAttribute="leading" secondItem="B2E-sx-rYE" secondAttribute="leading" id="mEC-jc-h2Y"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="breedGroup" destination="jPb-NK-FQ0" id="lW4-xY-t3P"/>
+                        <outlet property="image" destination="rs1-bg-a0c" id="KIb-Bd-IWN"/>
+                        <outlet property="name" destination="1gU-SV-qVi" id="5WV-g1-lo5"/>
+                        <outlet property="origin" destination="EZ4-3g-Ysd" id="oSG-yx-unb"/>
+                        <outlet property="temperament" destination="Ye6-kA-cwk" id="DnH-vQ-fa3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9v5-Xg-hty" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="889.85507246376824" y="-289.28571428571428"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="JmW-TT-rJt">
@@ -98,11 +258,20 @@
         </scene>
     </scenes>
     <resources>
+        <image name="chevron.backward" catalog="system" width="96" height="128"/>
+        <image name="dog" width="266.5" height="150"/>
         <image name="heart" catalog="system" width="128" height="109"/>
         <image name="heart.fill" catalog="system" width="128" height="109"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

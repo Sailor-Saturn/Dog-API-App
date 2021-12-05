@@ -1,7 +1,7 @@
 
 import UIKit
 
-class AllDogsCollectionViewController: UICollectionViewController, AllDogsView {
+class AllDogsCollectionViewController: UICollectionViewController  {
     var presenter: AllDogsPresenter?
     var gateway = AllDogsGateway()
     
@@ -46,11 +46,37 @@ class AllDogsCollectionViewController: UICollectionViewController, AllDogsView {
         return UICollectionViewCell()
     }
     
+    struct Storyboard {
+        static let dogViewCell = "DogViewCell"
+    }
+    
+    // MARK: - Collection select
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        presenter?.didSelect(row: indexPath.row)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        
+        guard let dogInformationViewController = segue.destination as? DogInformationViewController,
+              let dog = sender as? Dog else {
+            return
+        }
+        
+        dogInformationViewController.presenter = DogInformationPresenter(dogInformation: dog, view: dogInformationViewController)
+        dogInformationViewController.presenter?.view = dogInformationViewController
+    }
+}
+
+extension AllDogsCollectionViewController: AllDogsView {
+
     func reloadData() {
         collectionView.reloadData()
     }
     
-    struct Storyboard {
-        static let dogViewCell = "DogViewCell"
+    func navigateToDogInformationScreen(with dog: Dog) {
+        self.performSegue(withIdentifier: Segues.allDogsScreenToDogInformationScreen, sender: dog)
     }
+    
 }
