@@ -45,6 +45,7 @@ public class AllDogsPresenter {
     func configureDogCellView(_ view: DogCellView, forIndex index: Int) {
         let dog = allDogs[index]
         view.displayImage(with: dog.image.url)
+        view.displayDogName(with: dog.name)
     }
     
     func didSelect(row: Int){

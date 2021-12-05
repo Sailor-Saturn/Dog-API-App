@@ -40,6 +40,8 @@
 		0B45A302275C2DBD002791FA /* DogInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B45A301275C2DBD002791FA /* DogInformationViewController.swift */; };
 		0B45A304275C2E6E002791FA /* DogInformationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B45A303275C2E6E002791FA /* DogInformationPresenter.swift */; };
 		0B45A306275C3856002791FA /* Segues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B45A305275C3856002791FA /* Segues.swift */; };
+		0B45A30B275D39FD002791FA /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B45A30A275D39FD002791FA /* SearchViewController.swift */; };
+		0B45A30D275D3A0D002791FA /* SearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B45A30C275D3A0D002791FA /* SearchPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +91,8 @@
 		0B45A301275C2DBD002791FA /* DogInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogInformationViewController.swift; sourceTree = "<group>"; };
 		0B45A303275C2E6E002791FA /* DogInformationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogInformationPresenter.swift; sourceTree = "<group>"; };
 		0B45A305275C3856002791FA /* Segues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Segues.swift; sourceTree = "<group>"; };
+		0B45A30A275D39FD002791FA /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		0B45A30C275D3A0D002791FA /* SearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +186,7 @@
 		0B45A2CD275A7E8A002791FA /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				0B45A307275D1529002791FA /* Search */,
 				0B45A2FE275C2D9A002791FA /* DogInformation */,
 				0B45A2F1275BDE94002791FA /* AllBreeds */,
 				0B45A305275C3856002791FA /* Segues.swift */,
@@ -285,6 +290,31 @@
 			children = (
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		0B45A307275D1529002791FA /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				0B45A309275D1535002791FA /* Presentation */,
+				0B45A308275D1530002791FA /* Data */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		0B45A308275D1530002791FA /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		0B45A309275D1535002791FA /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				0B45A30A275D39FD002791FA /* SearchViewController.swift */,
+				0B45A30C275D3A0D002791FA /* SearchPresenter.swift */,
+			);
+			path = Presentation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -419,7 +449,9 @@
 			files = (
 				0B45A29A275A79D4002791FA /* AppDelegate.swift in Sources */,
 				0B45A2D8275A7F9B002791FA /* GetAllDogsRequest.swift in Sources */,
+				0B45A30D275D3A0D002791FA /* SearchPresenter.swift in Sources */,
 				0B45A2FD275C005E002791FA /* DogCellView.swift in Sources */,
+				0B45A30B275D39FD002791FA /* SearchViewController.swift in Sources */,
 				0B45A306275C3856002791FA /* Segues.swift in Sources */,
 				0B45A2D4275A7F6B002791FA /* NetworkSession.swift in Sources */,
 				0B45A2FB275BF929002791FA /* AllDogsPresenter.swift in Sources */,

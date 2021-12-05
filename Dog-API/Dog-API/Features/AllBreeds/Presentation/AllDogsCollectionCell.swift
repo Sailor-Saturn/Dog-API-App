@@ -4,6 +4,7 @@ import UIKit
 class AllDogsCollectionCell: UICollectionViewCell, DogCellView {
 
     @IBOutlet weak var image: UIImageView!
+    @IBOutlet weak var dogName: UILabel!
     
     // I didnt know how to show image from URL so I needed to research online and found this
     // https://www.hackingwithswift.com/example-code/uikit/how-to-load-a-remote-image-url-into-uiimageview
@@ -23,6 +24,10 @@ class AllDogsCollectionCell: UICollectionViewCell, DogCellView {
                 self?.image.image = image
             }
         }
+    }
+    
+    func displayDogName(with name: String) {
+        dogName.text = name
     }
     
     override func prepareForReuse() {
