@@ -63,27 +63,38 @@ public class SearchPresenter {
     
     func getDogsWithImages(with dogs: [Dog]) {
         var referenceImage: String
-        
+        var dogImage: Image?
         for dog in dogs {
             if (dog.referenceImageId == nil){
-                referenceImage = "https://commons.wikimedia.org/wiki/File:No-image-available.png"
+                referenceImage = "BJa4kxc4X" //"https://commons.wikimedia.org/wiki/File:No-image-available.png"
+                dogImage = Image(url: "https://www.freeiconspng.com/uploads/no-image-icon-15.png")
+                
+                let newDog =  Dog(name: dog.name,
+                                  breedGroup: dog.breedGroup,
+                                  temperament: dog.temperament,
+                                  origin: dog.origin,
+                                  image: dogImage,
+                                  referenceImageId: dog.referenceImageId)
+                self.returnedDogs.append(newDog)
             } else {
                 referenceImage = dog.referenceImageId!
+                searchManager.getImage(completion: {  [weak self] result in
+                    switch result {
+                    case .failure(let error):
+                        print("Error in Manager \(error)")
+                    case .success(let imageUrl):
+                        let newDog =  Dog(name: dog.name,
+                                          breedGroup: dog.breedGroup,
+                                          temperament: dog.temperament,
+                                          origin: dog.origin,
+                                          image: imageUrl,
+                                          referenceImageId: dog.referenceImageId)
+                        self?.returnedDogs.append(newDog)
+                    }
+                }, image: referenceImage)
             }
-            searchManager.getImage(completion: {  [weak self] result in
-                switch result {
-                case .failure(let error):
-                    print("Error in Manager \(error)")
-                case .success(let imageUrl):
-                    let newDog =  Dog(name: dog.name,
-                                      breedGroup: dog.breedGroup,
-                                      temperament: dog.temperament,
-                                      origin: dog.origin,
-                                      image: imageUrl,
-                                      referenceImageId: dog.referenceImageId)
-                    self?.returnedDogs.append(newDog)
-                }
-            }, image: referenceImage)
+            assignNewArray()
+            
         }
     }
     

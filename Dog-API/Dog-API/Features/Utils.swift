@@ -10,7 +10,7 @@ class Utils {
                    origin: buildField(with: dog.origin),
                    image: dog.image,
                    //TODO: Refactor this
-                   referenceImageId: "BJa4kxc4X")
+                   referenceImageId: dog.referenceImageId)
         
     }
     
