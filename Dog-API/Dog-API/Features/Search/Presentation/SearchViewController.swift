@@ -8,6 +8,9 @@ class SearchViewController: UIViewController, UICollectionViewDataSource{
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var emptyView: UIView!
     @IBOutlet weak var noInternetView: UIView!
+    @IBOutlet weak var searchingView: UIView!
+    
+    //@IBOutlet weak var searchingView: UIView!
     
     var presenter: SearchPresenter?
     var searchGateway = SearchGateway()
@@ -15,11 +18,13 @@ class SearchViewController: UIViewController, UICollectionViewDataSource{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        collectionView.delegate = self
-        collectionView.dataSource = self
         collectionView.isHidden = true
         emptyView.isHidden = true
         noInternetView.isHidden = true
+        searchingView.isHidden = true
+        
+        collectionView.delegate = self
+        collectionView.dataSource = self
         searchTextField.delegate = self
     
         presenter = SearchPresenter(
@@ -87,13 +92,13 @@ extension SearchViewController: UITextFieldDelegate {
         emptyView.isHidden = true
         noInternetView.isHidden = true
         placeholderView.isHidden = true
+        searchingView.isHidden = true
     }
 }
 
 extension SearchViewController: SearchView {
-    
     func reloadData() {
-        self.collectionView.isHidden = false
+        //self.collectionView.isHidden = false
         self.collectionView.reloadData()
     }
     
@@ -106,6 +111,7 @@ extension SearchViewController: SearchView {
         collectionView.isHidden = true
         placeholderView.isHidden = true
         noInternetView.isHidden = true
+        searchingView.isHidden = true
     }
     
     func displayNoInternet() {
@@ -113,6 +119,20 @@ extension SearchViewController: SearchView {
         emptyView.isHidden = true
         collectionView.isHidden = true
         placeholderView.isHidden = true
+        searchingView.isHidden = true
+    }
+    
+    func displayLoadingView() {
+        searchingView.isHidden = false
+        noInternetView.isHidden = true
+        emptyView.isHidden = true
+        collectionView.isHidden = true
+        placeholderView.isHidden = true
+    }
+    
+    func hideLoadingView() {
+        collectionView.isHidden = false
+        searchingView.isHidden = true
     }
 }
 

@@ -5,6 +5,8 @@ public protocol SearchView {
     func navigateToDogInformationScreen(with: Dog)
     func displayEmptyView()
     func displayNoInternet()
+    func displayLoadingView()
+    func hideLoadingView()
 }
 
 public class SearchPresenter {
@@ -19,11 +21,11 @@ public class SearchPresenter {
         }
     }
     
-    var returnedDogs = [Dog]() {
+    var returnedDogs = [Dog] () {
         didSet{
-            DispatchQueue.main.async {
-                self.assignNewArray()
-            }
+           DispatchQueue.main.async {
+               self.assignNewArray()
+           }
         }
     }
     
@@ -35,7 +37,11 @@ public class SearchPresenter {
     func searchQuery(with query: String) {
         // clear list 
         returnedDogs = []
+        
         searchManager.searchQuery(completion: { [weak self] result in
+            DispatchQueue.main.async {
+                self?.view?.displayLoadingView()
+            }
             switch result {
             case .failure(let error):
                 print(error)
@@ -58,7 +64,11 @@ public class SearchPresenter {
                 
                 //view.removePlaceholder
             }
+            DispatchQueue.main.async {
+                self?.view?.hideLoadingView()
+            }
         }, query: query)
+        
     }
     
     func getDogsWithImages(with dogs: [Dog]) {
@@ -93,8 +103,6 @@ public class SearchPresenter {
                     }
                 }, image: referenceImage)
             }
-            assignNewArray()
-            
         }
     }
     
