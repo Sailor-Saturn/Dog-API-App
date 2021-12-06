@@ -9,10 +9,12 @@
 2. Add UI tests;
 3. In AllDogsCollectionViewController the presenter always has a guard, how can this be removed?
 4. Add tests for util functions;
-5. Refactor UI and create it via UIKit only (no Storyboard).
+5. Refactor UI and create it via UIKit only (no Storyboard);
+6. Add pagination;
+7. Avoid duplicated views and create a generic view like ErrorView that accepts an image and text.
 
 ## Bonus Goals
-1. I added some UI tests;
+1. I added some unit tests;
 2. When there is no internet I load a mock json to show all breeds;
 3. Show error view when there is no internet or error in the search screen.
 
