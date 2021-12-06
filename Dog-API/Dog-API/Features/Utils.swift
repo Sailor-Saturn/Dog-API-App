@@ -9,7 +9,6 @@ class Utils {
                    temperament: buildField(with: dog.temperament),
                    origin: buildField(with: dog.origin),
                    image: dog.image,
-                   //TODO: Refactor this
                    referenceImageId: dog.referenceImageId)
         
     }
