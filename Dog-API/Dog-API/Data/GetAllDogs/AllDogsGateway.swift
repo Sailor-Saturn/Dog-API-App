@@ -32,9 +32,14 @@ final class AllDogsGateway: AllDogsGatewayProtocol {
             }
             
             do {
-                let response = try self.decoder.decode([Dog].self, from: jsonData)
+                var response = try self.decoder.decode([Dog].self, from: jsonData)
                 
-                // TODO: Add logic for when there is no internet
+                // MARK: - Offline Functionality
+                if response.isEmpty {
+                    
+                    response = try self.decoder.decode([Dog].self, from: getAllDogsRequest.data(using: .utf8)!)
+                }
+                
                 completion(.success(response))
             } catch {
                 debugPrint(error)

@@ -3,6 +3,8 @@ import Foundation
 public protocol SearchView {
     func reloadData()
     func navigateToDogInformationScreen(with: Dog)
+    func displayEmptyView()
+    func displayNoInternet()
 }
 
 public class SearchPresenter {
@@ -31,15 +33,29 @@ public class SearchPresenter {
     }
     
     func searchQuery(with query: String) {
+        // clear list 
+        returnedDogs = []
         searchManager.searchQuery(completion: { [weak self] result in
             switch result {
             case .failure(let error):
                 print(error)
+                if(error == .errorGettingData) {
+                    DispatchQueue.main.async {
+                        self?.view?.displayNoInternet()
+                    }
+                }
             case .success(let dogs):
                 // Router.show empty view
-                // Gets all object, now it's necessary to build an object with image
+                // Gets all object, now it's necessary to build an object with image´
+                // MARK: - Error Handling - Empty result list
+                if(dogs.isEmpty){
+                    DispatchQueue.main.async {
+                        self?.view?.displayEmptyView()
+                    }
+                }else {
+                    self?.getDogsWithImages(with: dogs)
+                }
                 
-                self?.getDogsWithImages(with: dogs)
                 //view.removePlaceholder
             }
         }, query: query)
@@ -50,7 +66,7 @@ public class SearchPresenter {
         
         for dog in dogs {
             if (dog.referenceImageId == nil){
-                referenceImage = "BJa4kxc4X"
+                referenceImage = "https://commons.wikimedia.org/wiki/File:No-image-available.png"
             } else {
                 referenceImage = dog.referenceImageId!
             }
@@ -69,8 +85,6 @@ public class SearchPresenter {
                 }
             }, image: referenceImage)
         }
-        
-        
     }
     
     func assignNewArray() {

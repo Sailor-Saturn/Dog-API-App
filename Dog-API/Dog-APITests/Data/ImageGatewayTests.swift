@@ -35,5 +35,6 @@ final class ImageGatewayTests: XCTestCase {
         waitForExpectations(timeout: 1)
         
         XCTAssertNil(error)
+        XCTAssertEqual(image?.url, "https://cdn2.thedogapi.com/images/BJa4kxc4X_1280.jpg")
     }
 }

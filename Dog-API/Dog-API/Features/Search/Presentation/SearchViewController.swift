@@ -6,6 +6,8 @@ class SearchViewController: UIViewController, UICollectionViewDataSource{
     @IBOutlet weak var placeholderView: UIView!
     @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var emptyView: UIView!
+    @IBOutlet weak var noInternetView: UIView!
     
     var presenter: SearchPresenter?
     var searchGateway = SearchGateway()
@@ -16,6 +18,8 @@ class SearchViewController: UIViewController, UICollectionViewDataSource{
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.isHidden = true
+        emptyView.isHidden = true
+        noInternetView.isHidden = true
         searchTextField.delegate = self
     
         presenter = SearchPresenter(
@@ -78,16 +82,37 @@ extension SearchViewController: UITextFieldDelegate {
         
         searchTextField.text = ""
     }
+    
+    func hideAllViewsToShowCollection() {
+        emptyView.isHidden = true
+        noInternetView.isHidden = true
+        placeholderView.isHidden = true
+    }
 }
 
 extension SearchViewController: SearchView {
     
     func reloadData() {
+        self.collectionView.isHidden = false
         self.collectionView.reloadData()
     }
     
     func navigateToDogInformationScreen(with dog: Dog) {
         self.performSegue(withIdentifier: Segues.searchScreenToDogInformationScreen, sender: dog)
+    }
+    
+    func displayEmptyView() {
+        emptyView.isHidden = false
+        collectionView.isHidden = true
+        placeholderView.isHidden = true
+        noInternetView.isHidden = true
+    }
+    
+    func displayNoInternet() {
+        noInternetView.isHidden = false
+        emptyView.isHidden = true
+        collectionView.isHidden = true
+        placeholderView.isHidden = true
     }
 }
 

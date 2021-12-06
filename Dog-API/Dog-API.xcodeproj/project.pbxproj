@@ -53,6 +53,7 @@
 		0BD3B087275D7F10000D553B /* AllDogsGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B45A2E0275A8A9F002791FA /* AllDogsGateway.swift */; };
 		0BD3B088275D7F51000D553B /* GetImageGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD3B07E275D53D5000D553B /* GetImageGateway.swift */; };
 		0BD3B089275D7F5B000D553B /* GetImageRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD3B07C275D53CB000D553B /* GetImageRequest.swift */; };
+		0BD3B08C275D8F15000D553B /* MockGatewayHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B45A2ED275A9932002791FA /* MockGatewayHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -509,6 +510,7 @@
 				0BD3B071275D3D85000D553B /* SearchRequest.swift in Sources */,
 				0B45A30B275D39FD002791FA /* SearchViewController.swift in Sources */,
 				0B45A306275C3856002791FA /* Segues.swift in Sources */,
+				0BD3B08C275D8F15000D553B /* MockGatewayHelper.swift in Sources */,
 				0BD3B077275D4F10000D553B /* Utils.swift in Sources */,
 				0B45A2D4275A7F6B002791FA /* NetworkSession.swift in Sources */,
 				0B45A2FB275BF929002791FA /* AllDogsPresenter.swift in Sources */,

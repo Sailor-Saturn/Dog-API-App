@@ -70,6 +70,61 @@
                                     <constraint firstAttribute="trailing" secondItem="knX-BL-naC" secondAttribute="trailing" constant="87" id="tlP-Y0-g2K"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qvI-qF-CzQ">
+                                <rect key="frame" x="0.0" y="237" width="414" height="421"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.55000001192092896" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emptyDogView" translatesAutoresizingMaskIntoConstraints="NO" id="d3o-0A-odo">
+                                        <rect key="frame" x="87" y="50" width="240" height="140"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="140" id="wjc-da-bQt"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No results, maybe search for cat? 🐈‍⬛" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hfQ-tC-Nfx">
+                                        <rect key="frame" x="0.0" y="260" width="414" height="24"/>
+                                        <fontDescription key="fontDescription" type="italicSystem" pointSize="20"/>
+                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="421" id="A6L-xP-pwq"/>
+                                    <constraint firstItem="hfQ-tC-Nfx" firstAttribute="leading" secondItem="qvI-qF-CzQ" secondAttribute="leading" id="BuY-wg-VFe"/>
+                                    <constraint firstItem="d3o-0A-odo" firstAttribute="leading" secondItem="qvI-qF-CzQ" secondAttribute="leading" constant="87" id="OqW-yv-STH"/>
+                                    <constraint firstItem="hfQ-tC-Nfx" firstAttribute="top" secondItem="d3o-0A-odo" secondAttribute="bottom" constant="70" id="ZNE-0h-AP5"/>
+                                    <constraint firstAttribute="trailing" secondItem="d3o-0A-odo" secondAttribute="trailing" constant="87" id="aW4-b7-NDT"/>
+                                    <constraint firstItem="d3o-0A-odo" firstAttribute="top" secondItem="qvI-qF-CzQ" secondAttribute="top" constant="50" id="b1c-Y0-ura"/>
+                                    <constraint firstAttribute="trailing" secondItem="hfQ-tC-Nfx" secondAttribute="trailing" id="kQD-66-NGd"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v5H-Bi-4vX">
+                                <rect key="frame" x="0.0" y="237" width="414" height="421"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.55000001192092896" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noInternetDogView" translatesAutoresizingMaskIntoConstraints="NO" id="Gco-nD-TAb">
+                                        <rect key="frame" x="87" y="50" width="240" height="140"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="140" id="zoI-6A-Os9"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No internet, go pet your dog ☺️" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="26q-Hn-ge0">
+                                        <rect key="frame" x="0.0" y="260" width="414" height="24"/>
+                                        <fontDescription key="fontDescription" type="italicSystem" pointSize="20"/>
+                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="421" id="6xP-AJ-VNo"/>
+                                    <constraint firstItem="Gco-nD-TAb" firstAttribute="top" secondItem="v5H-Bi-4vX" secondAttribute="top" constant="50" id="BDn-cn-lL7"/>
+                                    <constraint firstItem="Gco-nD-TAb" firstAttribute="leading" secondItem="v5H-Bi-4vX" secondAttribute="leading" constant="87" id="DgU-Sa-NKb"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="421" id="FLr-gl-lF1"/>
+                                    <constraint firstItem="26q-Hn-ge0" firstAttribute="leading" secondItem="v5H-Bi-4vX" secondAttribute="leading" id="cIH-bw-ZeS"/>
+                                    <constraint firstItem="26q-Hn-ge0" firstAttribute="top" secondItem="Gco-nD-TAb" secondAttribute="bottom" constant="70" id="i8Z-wc-bER"/>
+                                    <constraint firstAttribute="trailing" secondItem="26q-Hn-ge0" secondAttribute="trailing" id="wWN-07-F2I"/>
+                                    <constraint firstAttribute="trailing" secondItem="Gco-nD-TAb" secondAttribute="trailing" constant="87" id="yfy-RJ-dve"/>
+                                </constraints>
+                            </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="t0j-b5-dFh">
                                 <rect key="frame" x="0.0" y="84" width="414" height="729"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -95,7 +150,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="31" id="7qc-Q1-vI2"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -123,11 +178,17 @@
                         <constraints>
                             <constraint firstItem="t0j-b5-dFh" firstAttribute="bottom" secondItem="X1W-vx-gCN" secondAttribute="bottom" id="5FU-AB-FtB"/>
                             <constraint firstItem="4EP-YN-342" firstAttribute="leading" secondItem="X1W-vx-gCN" secondAttribute="leading" id="5af-wm-V9n"/>
+                            <constraint firstItem="qvI-qF-CzQ" firstAttribute="trailing" secondItem="X1W-vx-gCN" secondAttribute="trailing" id="Jqt-al-dFJ"/>
+                            <constraint firstItem="v5H-Bi-4vX" firstAttribute="leading" secondItem="X1W-vx-gCN" secondAttribute="leading" id="Jyr-sz-ETh"/>
+                            <constraint firstItem="v5H-Bi-4vX" firstAttribute="trailing" secondItem="X1W-vx-gCN" secondAttribute="trailing" id="Kqw-CW-lzd"/>
                             <constraint firstItem="pX1-xu-YAl" firstAttribute="leading" secondItem="fJg-Sb-EwC" secondAttribute="leading" id="YAi-4X-dtU"/>
+                            <constraint firstItem="v5H-Bi-4vX" firstAttribute="top" secondItem="pX1-xu-YAl" secondAttribute="bottom" constant="153" id="Za0-HF-E6T"/>
                             <constraint firstItem="pX1-xu-YAl" firstAttribute="top" secondItem="X1W-vx-gCN" secondAttribute="top" id="b4X-1F-iYN"/>
+                            <constraint firstItem="qvI-qF-CzQ" firstAttribute="leading" secondItem="X1W-vx-gCN" secondAttribute="leading" id="c77-Ad-oof"/>
                             <constraint firstItem="X1W-vx-gCN" firstAttribute="trailing" secondItem="4EP-YN-342" secondAttribute="trailing" id="g7K-zZ-W42"/>
                             <constraint firstItem="t0j-b5-dFh" firstAttribute="leading" secondItem="X1W-vx-gCN" secondAttribute="leading" id="gad-RY-h7I"/>
                             <constraint firstItem="X1W-vx-gCN" firstAttribute="trailing" secondItem="pX1-xu-YAl" secondAttribute="trailing" id="geX-3a-V5q"/>
+                            <constraint firstItem="qvI-qF-CzQ" firstAttribute="top" secondItem="pX1-xu-YAl" secondAttribute="bottom" constant="153" id="miU-98-g1e"/>
                             <constraint firstItem="t0j-b5-dFh" firstAttribute="top" secondItem="pX1-xu-YAl" secondAttribute="bottom" id="sCv-VM-14e"/>
                             <constraint firstItem="4EP-YN-342" firstAttribute="top" secondItem="pX1-xu-YAl" secondAttribute="bottom" constant="142" id="srq-hv-MbY"/>
                             <constraint firstItem="t0j-b5-dFh" firstAttribute="trailing" secondItem="X1W-vx-gCN" secondAttribute="trailing" id="xEy-fZ-bcO"/>
@@ -136,6 +197,8 @@
                     <tabBarItem key="tabBarItem" selectedImage="square.and.arrow.up" catalog="system" systemItem="search" id="6Fs-7M-NRp"/>
                     <connections>
                         <outlet property="collectionView" destination="t0j-b5-dFh" id="2dL-96-60m"/>
+                        <outlet property="emptyView" destination="qvI-qF-CzQ" id="uJf-Rt-Dh2"/>
+                        <outlet property="noInternetView" destination="v5H-Bi-4vX" id="APt-E8-ByA"/>
                         <outlet property="placeholderView" destination="4EP-YN-342" id="LOh-Q3-Nkp"/>
                         <outlet property="searchTextField" destination="qkZ-KE-Ynr" id="cur-pb-Ydw"/>
                         <segue destination="51I-CK-ZAN" kind="presentation" identifier="searchScreenToDogInformationScreen" id="uNl-yG-QvO"/>
@@ -336,9 +399,11 @@
     <resources>
         <image name="chevron.backward" catalog="system" width="96" height="128"/>
         <image name="dog" width="266.5" height="150"/>
+        <image name="emptyDogView" width="166" height="166.5"/>
         <image name="heart" catalog="system" width="128" height="109"/>
         <image name="heart.fill" catalog="system" width="128" height="109"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="noInternetDogView" width="226.5" height="170"/>
         <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
