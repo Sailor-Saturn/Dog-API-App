@@ -1,6 +1,6 @@
 import UIKit
 
-class SearchCollectionCell: UICollectionViewCell, DogCellView {
+final class SearchCollectionCell: UICollectionViewCell, DogCellView {
 
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var dogName: UILabel!

@@ -7,7 +7,7 @@ protocol AllDogsManagerProtocol: AnyObject {
     func requestAllDogs(completion: @escaping(Result<[Dog], AllDogsGatewayError>) -> Void)
 }
 
-public class AllDogsManager: AllDogsManagerProtocol {
+public final class AllDogsManager: AllDogsManagerProtocol {
     let allDogsGateway: AllDogsGatewayProtocol
     
     init(allDogsGateway: AllDogsGatewayProtocol){

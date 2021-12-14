@@ -1,6 +1,6 @@
 import Foundation
 
-class Utils {
+enum Utils {
     // TODO: Add tests for this function
     static func buildDogInfo(with dog: Dog) -> Dog{
         

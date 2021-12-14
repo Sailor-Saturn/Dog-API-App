@@ -25,19 +25,21 @@ final class AllDogsGateway: AllDogsGatewayProtocol {
         
         let request = GetAllDogsRequest()
         
-        networkSession.loadData(from: request.urlRequest) { data, _ in
+        networkSession.loadData(from: request.urlRequest) {  [weak self] data, _ in
             guard let jsonData =  data else {
                 completion(.failure(.errorGettingData))
                 return
             }
             
             do {
-                var response = try self.decoder.decode([Dog].self, from: jsonData)
+                guard var response = try self?.decoder.decode([Dog].self, from: jsonData) else {
+                    return
+                }
                 
                 // MARK: - Offline Functionality
                 if response.isEmpty {
                     
-                    response = try self.decoder.decode([Dog].self, from: getAllDogsRequest.data(using: .utf8)!)
+                    response = try self?.decoder.decode([Dog].self, from: getAllDogsRequest.data(using: .utf8)!) as! [Dog]
                 }
                 
                 completion(.success(response))

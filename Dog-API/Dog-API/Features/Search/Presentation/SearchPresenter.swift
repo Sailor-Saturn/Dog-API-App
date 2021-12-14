@@ -7,7 +7,7 @@ public protocol SearchView {
     func displayNoInternet()
 }
 
-public class SearchPresenter {
+public final class SearchPresenter {
     let searchManager: SearchManager
     public var view: SearchView?
     

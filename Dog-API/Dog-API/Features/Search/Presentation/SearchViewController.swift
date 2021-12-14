@@ -1,7 +1,7 @@
 
 import UIKit
 
-class SearchViewController: UIViewController, UICollectionViewDataSource{
+final class SearchViewController: UIViewController, UICollectionViewDataSource{
     
     @IBOutlet weak var placeholderView: UIView!
     @IBOutlet weak var searchTextField: UITextField!

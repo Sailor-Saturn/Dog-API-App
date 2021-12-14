@@ -1,7 +1,7 @@
 
 import UIKit
 
-class AllDogsCollectionViewController: UICollectionViewController  {
+final class AllDogsCollectionViewController: UICollectionViewController  {
     var presenter: AllDogsPresenter?
     var gateway = AllDogsGateway()
     

@@ -5,7 +5,7 @@ protocol SearchManagerProtocol: AnyObject {
     func searchQuery(completion: @escaping(Result<[Dog], SearchGatewayError>) -> Void, query: String)
 }
 
-public class SearchManager: SearchManagerProtocol {
+public final class SearchManager: SearchManagerProtocol {
     let searchGateway: SearchGatewayProtocol
     let imageGateway: ImageGatewayProtocol
     

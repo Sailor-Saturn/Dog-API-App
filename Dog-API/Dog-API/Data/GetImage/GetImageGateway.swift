@@ -25,14 +25,16 @@ final class ImageGateway: ImageGatewayProtocol {
         
         let request = GetImageRequest(with: image)
         
-        networkSession.loadData(from: request.urlRequest) { data, _ in
+        networkSession.loadData(from: request.urlRequest) { [weak self] data, _ in
             guard let jsonData =  data else {
                 completion(.failure(.errorGettingData))
                 return
             }
             
             do {
-                let response = try self.decoder.decode(Image.self, from: jsonData)
+                guard let response = try self?.decoder.decode(Image.self, from: jsonData) else {
+                    return
+                }
                 // TODO: Add logic for when there is no internet
                 completion(.success(response))
             } catch {

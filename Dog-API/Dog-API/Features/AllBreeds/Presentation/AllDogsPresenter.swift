@@ -6,7 +6,7 @@ public protocol AllDogsView {
     func navigateToDogInformationScreen(with: Dog)
 }
 
-public class AllDogsPresenter {
+public final class AllDogsPresenter {
     let allDogsManager: AllDogsManager
     public var view: AllDogsView?
     

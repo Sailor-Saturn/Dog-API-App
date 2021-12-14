@@ -8,7 +8,7 @@ public protocol DogInformationView {
     func displayOrigin(with origin: String)
     func displayBreedGroup(with group: String)
 }
-public class DogInformationPresenter {
+public final class DogInformationPresenter {
     let dogInformation: Dog
 
     public var view: DogInformationView?

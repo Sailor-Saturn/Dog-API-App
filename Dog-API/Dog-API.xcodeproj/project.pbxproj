@@ -47,7 +47,6 @@
 		0BD3B077275D4F10000D553B /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD3B076275D4F10000D553B /* Utils.swift */; };
 		0BD3B07D275D53CB000D553B /* GetImageRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD3B07C275D53CB000D553B /* GetImageRequest.swift */; };
 		0BD3B07F275D53D5000D553B /* GetImageGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD3B07E275D53D5000D553B /* GetImageGateway.swift */; };
-		0BD3B081275D6C37000D553B /* ImageURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD3B080275D6C37000D553B /* ImageURL.swift */; };
 		0BD3B083275D6E67000D553B /* SearchCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD3B082275D6E67000D553B /* SearchCollectionCell.swift */; };
 		0BD3B085275D7E5B000D553B /* ImageGatewayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD3B084275D7E5B000D553B /* ImageGatewayTests.swift */; };
 		0BD3B087275D7F10000D553B /* AllDogsGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B45A2E0275A8A9F002791FA /* AllDogsGateway.swift */; };
@@ -111,7 +110,6 @@
 		0BD3B076275D4F10000D553B /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		0BD3B07C275D53CB000D553B /* GetImageRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetImageRequest.swift; sourceTree = "<group>"; };
 		0BD3B07E275D53D5000D553B /* GetImageGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetImageGateway.swift; sourceTree = "<group>"; };
-		0BD3B080275D6C37000D553B /* ImageURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageURL.swift; sourceTree = "<group>"; };
 		0BD3B082275D6E67000D553B /* SearchCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCollectionCell.swift; sourceTree = "<group>"; };
 		0BD3B084275D7E5B000D553B /* ImageGatewayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGatewayTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -200,7 +198,6 @@
 			isa = PBXGroup;
 			children = (
 				0B45A2E4275A8CE8002791FA /* Dog.swift */,
-				0BD3B080275D6C37000D553B /* ImageURL.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -506,7 +503,6 @@
 				0B45A2D8275A7F9B002791FA /* GetAllDogsRequest.swift in Sources */,
 				0B45A30D275D3A0D002791FA /* SearchPresenter.swift in Sources */,
 				0B45A2FD275C005E002791FA /* DogCellView.swift in Sources */,
-				0BD3B081275D6C37000D553B /* ImageURL.swift in Sources */,
 				0BD3B071275D3D85000D553B /* SearchRequest.swift in Sources */,
 				0B45A30B275D39FD002791FA /* SearchViewController.swift in Sources */,
 				0B45A306275C3856002791FA /* Segues.swift in Sources */,

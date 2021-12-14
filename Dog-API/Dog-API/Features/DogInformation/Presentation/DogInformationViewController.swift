@@ -1,7 +1,7 @@
 
 import UIKit
 
-class DogInformationViewController: UIViewController {
+final class DogInformationViewController: UIViewController {
     @IBOutlet weak var image: UIImageView!
     
     @IBOutlet weak var name: UILabel!
